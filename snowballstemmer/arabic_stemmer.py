@@ -3,7 +3,7 @@
 
 from .basestemmer import BaseStemmer
 from .among import Among
-
+import pkg_resources
 
 class ArabicStemmer(BaseStemmer):
     '''
