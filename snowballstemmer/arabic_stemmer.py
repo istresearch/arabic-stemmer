@@ -1761,6 +1761,15 @@ class ArabicStemmer(BaseStemmer):
         self.cursor = v_22
         return True
 
+    def get_stop_words(self):
+        stop_path = pkg_resources.resource_filename('snowballstemmer', 'stop_words/arabic_stops_ist.txt')
+        with open(stop_path) as stop_file:
+            content = list(stop_file)
+        
+        content = [x.strip() for x in content]
+        return content
+
+
 
 class lab0(BaseException): pass
 
